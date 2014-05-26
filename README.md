@@ -40,3 +40,7 @@ Options
     <td>rotateDuration</td><td>Duration of the rotate animation</td><td>0.6 (s)</td>
   </tr>
 </table>
+
+Demo
+---------------------
+[Live demo here](http://cctiger36.github.io/rotate-number)
