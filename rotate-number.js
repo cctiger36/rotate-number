@@ -26,7 +26,7 @@
       el.find(".digit").each(function(index, c) {
         c.style.position = "relative";
         c.style.display = "block";
-        c.style.float = "left";
+        c.style.cssFloat = "left";
         c.style.top = 0;
         c.style.transition = "top " + opts.rotateDuration + "s ease";
       });
