@@ -7,6 +7,32 @@
     <meta name="description" content="rotate-number : A simple jQuery plugin to create animations of digital number rotation. Compatible with Zepto." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <style>
+    #rotate {
+      font-family: Arial;
+      font-weight: bold;
+      color: #4c8dfb;
+    }
+    #rotate .digit {
+      width: 30px;
+    }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="javascripts/rotate-number.min.js"></script>
+    <script>
+    $(function() {
+      var rotate = $("#rotate").rotateNumber({
+        digits: 5
+      });
+
+      var number = 0;
+      setInterval(function() {
+        var rand = Math.floor(Math.random() * 9) + 1;
+        number += rand;
+        rotate.setNumber(number);
+      }, 1500);
+    });
+    </script>
 
     <title>rotate-number</title>
   </head>
@@ -38,6 +64,7 @@
 
 <h2>
 <a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h2>
+<div id="rotate"></div>
 
 <h3>
 <a name="html-snippet" class="anchor" href="#html-snippet"><span class="octicon octicon-link"></span></a>HTML Snippet</h3>
