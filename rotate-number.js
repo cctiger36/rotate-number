@@ -39,6 +39,13 @@
       });
     }
 
+    base.resizeDigit = function(digitSize) {
+      opts.digitSize = digitSize;
+      el[0].style.height = opts.digitSize + "px";
+      el[0].style.fontSize = opts.digitSize + "px";
+      el[0].style.lineHeight = opts.digitSize + "px";
+    }
+
     base.init();
   };
 
