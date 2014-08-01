@@ -14,7 +14,17 @@
         e.innerHTML = "0 1 2 3 4 5 6 7 8 9";
         e.className = "digit";
         el[0].appendChild(e);
+        if (opts.separator !== '' && opts.digits > i + 1 && (opts.digits - i) % 3 == 1) {
+          el[0].appendChild(base.separator());
+        }
       }
+    }
+
+    base.separator = function() {
+      var e = document.createElement("span");
+      e.innerHTML = opts.separator;
+      e.className = "separator";
+      return e;
     }
 
     base.initBaseStyles = function() {
@@ -23,7 +33,7 @@
       el[0].style.lineHeight = opts.digitSize + "px";
       el[0].style.textAlign = "center";
       el[0].style.overflow = "hidden";
-      el.find(".digit").each(function(index, c) {
+      el.find(".digit, .separator").each(function(index, c) {
         c.style.position = "relative";
         c.style.display = "block";
         c.style.cssFloat = "left";
@@ -52,7 +62,8 @@
   $.rotateNumber.defaultOptions = {
     digits: 3,
     digitSize: 50,
-    rotateDuration: .6
+    rotateDuration: .6,
+    separator: ''
   };
 
   $.fn.rotateNumber = function(options) {

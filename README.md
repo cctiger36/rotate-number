@@ -39,6 +39,9 @@ Options
   <tr>
     <td>rotateDuration</td><td>Duration of the rotate animation</td><td>0.6 (s)</td>
   </tr>
+  <tr>
+    <td>separator</td><td>Insert separator per 3 digits (e.g. ',')</td><td>None</td>
+  </tr>
 </table>
 
 Demo
