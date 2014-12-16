@@ -22,12 +22,16 @@
     <script>
     $(function() {
       var rotate = $("#rotate").rotateNumber({
-        digits: 5
+        digits: 7,
+        separator: ','
       });
 
-      var number = 0;
+      // set start number
+      var number = 1000000;
+      rotate.setNumber(number);
+
       setInterval(function() {
-        var rand = Math.floor(Math.random() * 9) + 1;
+        var rand = Math.floor(Math.random() * 500) + 1;
         number += rand;
         rotate.setNumber(number);
       }, 1500);
@@ -75,7 +79,7 @@
 <h3>
 <a name="javascript" class="anchor" href="#javascript"><span class="octicon octicon-link"></span></a>Javascript</h3>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#rotate"</span><span class="p">).</span><span class="nx">rotateNumber</span><span class="p">({</span><span class="nx">digits</span><span class="o">:</span> <span class="mi">5</span><span class="p">});</span>
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#rotate"</span><span class="p">).</span><span class="nx">rotateNumber</span><span class="p">({</span><span class="nx">digits</span><span class="o">:</span> <span class="mi">7</span><span class="p">});</span>
 </pre></div>
 
 <h3>
@@ -112,7 +116,12 @@
 <td>rotateDuration</td>
 <td>Duration of the rotate animation</td>
 <td>0.6 (s)</td>
-  </tr>
+</tr>
+<tr>
+<td>separator</td>
+<td>Insert separator between every 3 digits</td>
+<td>(none)</td>
+</tr>
 </table>
       </section>
     </div>
