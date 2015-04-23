@@ -37,7 +37,7 @@
 <p>A simple jQuery plugin to create animations of digital number rotation. Compatible with Zepto.</p>
 
 <h2>
-<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <h3>
 <a id="html-snippet" class="anchor" href="#html-snippet" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML Snippet</h3>
@@ -47,7 +47,7 @@
 <h3>
 <a id="javascript" class="anchor" href="#javascript" aria-hidden="true"><span class="octicon octicon-link"></span></a>Javascript</h3>
 
-<div class="highlight highlight-javascript"><pre>$(<span class="pl-s"><span class="pl-pds">"</span>#rotate<span class="pl-pds">"</span></span>).rotateNumber({digits<span class="pl-k">:</span> <span class="pl-c1">5</span>});</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-k">var</span> rotator <span class="pl-k">=</span> $(<span class="pl-s"><span class="pl-pds">"</span>#rotate<span class="pl-pds">"</span></span>).rotateNumber({digits<span class="pl-k">:</span> <span class="pl-c1">5</span>});</pre></div>
 
 <h3>
 <a id="css" class="anchor" href="#css" aria-hidden="true"><span class="octicon octicon-link"></span></a>CSS</h3>
@@ -58,6 +58,16 @@
 <span class="pl-e">#rotate</span> <span class="pl-e">.digit</span> {
   <span class="pl-c1"><span class="pl-c1">width</span></span>: <span class="pl-c1">30<span class="pl-k">px</span></span>;
 }</pre></div>
+
+<h3>
+<a id="update-number" class="anchor" href="#update-number" aria-hidden="true"><span class="octicon octicon-link"></span></a>Update Number</h3>
+
+<div class="highlight highlight-javascript"><pre>rotator.setNumber(NEW_NUMBER);</pre></div>
+
+<h3>
+<a id="resize" class="anchor" href="#resize" aria-hidden="true"><span class="octicon octicon-link"></span></a>Resize</h3>
+
+<div class="highlight highlight-javascript"><pre>rotator.resizeDigit(NEW_FONT_SIZE);</pre></div>
 
 <h2>
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
@@ -83,7 +93,17 @@
 <td>Duration of the rotate animation</td>
 <td>0.6 (s)</td>
   </tr>
+  <tr>
+    <td>separator</td>
+<td>Insert separator per 3 digits (e.g. ',')</td>
+<td>None</td>
+  </tr>
 </table>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p><a href="http://cctiger36.github.io/rotate-number">Live demo here</a></p>
       </section>
     </div>
 
