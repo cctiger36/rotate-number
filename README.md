@@ -3,25 +3,43 @@ Rotate number plugin
 
 A simple jQuery plugin to create animations of digital number rotation. Compatible with Zepto.
 
-Example
+Usage
 ---------------------
 
-### HTML Snippet ######
+### HTML Snippet ###
 
-    <div id="rotate"></div>
+```html
+<div id="rotate"></div>
+```
 
-### Javascript ######
+### Javascript ###
 
-    $("#rotate").rotateNumber({digits: 5});
+```javascript
+var rotator = $("#rotate").rotateNumber({digits: 5});
+```
 
-### CSS ######
+### CSS ###
 
-    #rotate {
-      font-family: Arial;
-    }
-    #rotate .digit {
-      width: 30px;
-    }
+```css
+#rotate {
+  font-family: Arial;
+}
+#rotate .digit {
+  width: 30px;
+}
+```
+
+### Update Number ###
+
+```javascript
+rotator.setNumber(NEW_NUMBER);
+```
+
+### Resize ###
+
+```javascript
+rotator.resizeDigit(NEW_FONT_SIZE);
+```
 
 Options
 ---------------------
