@@ -9,6 +9,37 @@
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>rotate-number</title>
+
+    <style>
+    #rotate {
+      font-family: Arial;
+      font-weight: bold;
+      color: #4c8dfb;
+    }
+    #rotate .digit {
+      width: 30px;
+    }
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="javascripts/rotate-number.min.js"></script>
+    <script>
+    $(function() {
+      var rotator = $("#rotate").rotateNumber({
+        digits: 7,
+        separator: ','
+      });
+
+      // set start number
+      var number = 1000000;
+      rotator.setNumber(number);
+
+      setInterval(function() {
+        var rand = Math.floor(Math.random() * 500) + 1;
+        number += rand;
+        rotator.setNumber(number);
+      }, 1500);
+    });
+    </script>
   </head>
 
   <body>
@@ -38,6 +69,7 @@
 
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<div id="rotate"></div>
 
 <h3>
 <a id="html-snippet" class="anchor" href="#html-snippet" aria-hidden="true"><span class="octicon octicon-link"></span></a>HTML Snippet</h3>
