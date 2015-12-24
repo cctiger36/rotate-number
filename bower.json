@@ -1,0 +1,22 @@
+{
+  "name": "rotate-number",
+  "main": "rotate-number.js",
+  "homepage": "https://github.com/cctiger36/rotate-number",
+  "version": "1.0.0",
+  "authors": [
+    "weihu_chen <cctiger36@gmail.com>"
+  ],
+  "keywords": [
+    "rotate",
+    "animation"
+  ],
+  "description": "A simple jQuery plugin to create animations of digital number rotation. Compatible with Zepto.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
